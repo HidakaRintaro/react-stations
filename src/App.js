@@ -9,6 +9,18 @@ import './App.css'
  */
 export const App = () => {
   const [dogUrl, setDogUrl] = React.useState("https://images.dog.ceo/breeds/spaniel-brittany/n02101388_6057.jpg");
+
+  const onImgChange = () => {
+    fetch("https://dog.ceo/api/breeds/image/random")
+      .then(res => res.json())
+      .then(
+        result => {
+          console.log(result["message"])
+          setDogUrl(result["message"])
+        }
+      )
+  }
+
   return (
     <div>
       <header>
@@ -17,7 +29,7 @@ export const App = () => {
       <p>犬の画像を表示するサイトです</p>
       <img src={dogUrl} />
       <br />
-      <button onClick={() => setDogUrl("https://images.dog.ceo/breeds/hound-english/n02089973_1132.jpg")}>更新</button>
+      <button onClick={onImgChange}>更新</button>
     </div>
   )
 }
