@@ -13,6 +13,8 @@ export const App = () => {
       <header>
         <h1>Dog アプリ</h1>
       </header>
+      <p>犬の画像を表示するサイトです</p>
+      <img src="https://images.dog.ceo/breeds/mastiff-tibetan/n02108551_728.jpg" />
     </div>
   )
 }
