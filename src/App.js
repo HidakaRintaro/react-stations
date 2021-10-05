@@ -2,7 +2,7 @@
 
 import React from 'react'
 import './App.css'
-import { DogListContainer } from './DogListContainer'
+import { Description } from './Description'
 import { Header } from './Header'
 
 /**
@@ -13,7 +13,7 @@ export const App = () => {
   return (
     <div>
       <Header />
-      <DogListContainer />
+      <Description />
     </div>
   )
 }
