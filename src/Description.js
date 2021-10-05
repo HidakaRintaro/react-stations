@@ -8,7 +8,7 @@ export const Description = () => {
   )
   const [loading, setLoading] = useState(false)
 
-  const onImgChange = async () => {
+  const onImgChange = () => {
     setLoading(true)
     fetch('https://dog.ceo/api/breeds/image/random')
       .then(res => {
