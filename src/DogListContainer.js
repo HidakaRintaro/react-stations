@@ -5,7 +5,8 @@ import { BreedsSelect } from './BreedsSelect'
 
 export const DogListContainer = () => {
   const [breeds, setBreeds] = useState([])
-  const [selectedBreed, useSelectedBreed] = useState('')
+  const [selectedBreed, useSelectedBreed] = useState('affenpinscher')
+  const [dogsUrl, setDogsUrl] = useState([])
 
   useEffect(() => {
     fetch('https://dog.ceo/api/breeds/list/all')
@@ -22,6 +23,8 @@ export const DogListContainer = () => {
       breeds={breeds}
       selectedBreed={selectedBreed}
       useSelectedBreed={useSelectedBreed}
+      dogsUrl={dogsUrl}
+      setDogsUrl={setDogsUrl}
     />
   )
 }

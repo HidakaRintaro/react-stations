@@ -11,9 +11,7 @@ export const Description = () => {
   const onImgChange = () => {
     setLoading(true)
     fetch('https://dog.ceo/api/breeds/image/random')
-      .then(res => {
-        return res.json()
-      })
+      .then(res => res.json())
       .then(result => setDogUrl(result['message']))
       .finally(() => {
         setLoading(false)
