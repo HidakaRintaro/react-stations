@@ -10,9 +10,7 @@ export const DogListContainer = () => {
 
   useEffect(() => {
     fetch('https://dog.ceo/api/breeds/list/all')
-      .then(res => {
-        return res.json()
-      })
+      .then(res => res.json())
       .then(result => {
         setBreeds(Object.keys(result['message']))
       })
